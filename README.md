@@ -1,18 +1,27 @@
-# React + Vite
+## Paso 1: Crear proyecto de React con Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+npm creat vite@lates product-frontend -- --template react
 
-Currently, two official plugins are available:
+## Paso 2: moverse a la carpeta del proyecto 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+cd product-frontend
 
-## React Compiler
+## Paso 2.1: Iniciar la app en modo desarrollo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+npm run dev
 
-## Expanding the ESLint configuration
+## Paso 3: Instalar Tailwind CSS y dependencias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm install -D tailwindcss@latest @tailwindcss/postcss@latest postcss autoprefixer
 
-Hola Mundo
+## Paso 4: Crear el archivo ./postcss.config.js
+
+import autoprefixer from "autoprefixer";
+
+export default {
+  plugins: {
+    'tailwindcss/postcss': {},
+    autoprefixer: {},
+  },
+};
+
